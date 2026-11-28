@@ -1,0 +1,10 @@
+:root { --bg: #ffffff; --ink: #111111; --muted: #555555; }
+@media (prefers-color-scheme: dark) { :root { --bg: #111111; --ink: #f2f2f2; --muted: #aaaaaa; } }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.6 system-ui, -apple-system, Segoe UI, sans-serif; }
+main { max-width: 680px; margin: 0 auto; padding: 40px 16px 64px; }
+h1 { font-size: 28px; line-height: 1.2; margin: 0 0 8px; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+p, li { color: var(--ink); }
+.muted { color: var(--muted); font-size: 15px; }
+code { font-size: 15px; word-break: break-all; }
+a { color: inherit; }

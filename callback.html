@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>carsinmedia sign-in</title><link rel="stylesheet" href="style.css"></head>
+<body><main>
+<h1>Signed in</h1>
+<p id="msg">Copy the code below and paste it into the chat with Claude. It works only once and only for a few minutes.</p>
+<p><code id="code"></code></p>
+<script>
+  var q = new URLSearchParams(location.search);
+  var c = q.get('code');
+  if (c) { document.getElementById('code').textContent = c; }
+  else { document.getElementById('msg').textContent = 'No code came back: ' + (q.get('error_description') || q.get('error') || 'unknown error') + '.'; }
+</script>
+</main></body></html>
